@@ -20,7 +20,7 @@ export function ProfileDropdown({ username }) {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:8080/api/auth/logout",
+        "/api/auth/logout",
         {
           method: "POST",
           headers: {

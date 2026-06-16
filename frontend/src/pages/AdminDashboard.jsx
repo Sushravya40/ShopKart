@@ -66,7 +66,7 @@ const AdminDashboard = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("/api/auth/logout", {
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + "/api/auth/logout", {
         method: "POST",
         credentials: "include",
         headers: {
@@ -88,7 +88,7 @@ const AdminDashboard = () => {
   // Handlers for each modal action
   const handleAddProductSubmit = async (productData) => {
     try {
-      const response = await fetch("/admin/products/add", {
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + "/admin/products/add", {
         method: "POST",
         credentials: "include",
         headers: {
@@ -134,7 +134,7 @@ const AdminDashboard = () => {
 
   const handleViewUserSubmit = async ({ userId }) => {
     try {
-      const response = await fetch("/admin/user/getbyid", {
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + "/admin/user/getbyid", {
         method: "POST",
         credentials: "include",
         headers: {

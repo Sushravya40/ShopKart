@@ -63,7 +63,7 @@ const response = await fetch(
   const handleRemoveItem = async (productId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("/api/cart/delete", {
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + "/api/cart/delete", {
         method: "DELETE",
         headers: { 
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ const response = await fetch(
         return;
       }
       const token = localStorage.getItem("token");
-      const response = await fetch("/api/cart/update", {
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + "/api/cart/update", {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",
@@ -235,7 +235,7 @@ const shipping = 370; // Hardcoded shipping value
   );
 }
 const handleLogout = async () => {
-   await fetch("http://localhost:8080/api/auth/logout", {
+   await fetch((import.meta.env.VITE_API_URL || "") + "/api/auth/logout", {
       method: "POST",
       credentials: "include"
    });
