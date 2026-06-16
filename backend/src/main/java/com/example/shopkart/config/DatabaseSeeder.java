@@ -44,22 +44,21 @@ public class DatabaseSeeder implements CommandLineRunner {
             Category headphones = categoryRepository.findByCategoryName("Headphones").orElseThrow();
             Category watches = categoryRepository.findByCategoryName("Smart Watches").orElseThrow();
 
-            // Mobiles
-            adminProductService.addProduct("iPhone 15 Pro", "The ultimate iPhone with Titanium frame.", BigDecimal.valueOf(999.00), 50, mobiles.getCategoryId(), "https://m.media-amazon.com/images/I/81+GIkwqLIL._AC_UY327_FMwebp_QL65_.jpg");
-            adminProductService.addProduct("Samsung Galaxy S24 Ultra", "Galaxy AI is here.", BigDecimal.valueOf(1199.00), 40, mobiles.getCategoryId(), "https://m.media-amazon.com/images/I/71CXhVhpM0L._AC_UY327_FMwebp_QL65_.jpg");
-            adminProductService.addProduct("Google Pixel 8 Pro", "Google's best phone yet.", BigDecimal.valueOf(899.00), 30, mobiles.getCategoryId(), "https://m.media-amazon.com/images/I/71h3zJjHlHL._AC_UY327_FMwebp_QL65_.jpg");
+            // Mobiles (2 products)
+            adminProductService.addProduct("iPhone 15 Pro", "The ultimate iPhone with Titanium frame.", BigDecimal.valueOf(134900.00), 50, mobiles.getCategoryId(), "https://m.media-amazon.com/images/I/81sigp+1w0L._AC_SL1500_.jpg");
+            adminProductService.addProduct("Samsung Galaxy S24 Ultra", "Galaxy AI is here.", BigDecimal.valueOf(129999.00), 40, mobiles.getCategoryId(), "https://m.media-amazon.com/images/I/71CXhVhpM0L._AC_SL1500_.jpg");
 
-            // Laptops
-            adminProductService.addProduct("MacBook Pro 14\"", "M3 Pro chip, 18GB RAM.", BigDecimal.valueOf(1999.00), 20, laptops.getCategoryId(), "https://m.media-amazon.com/images/I/618d5bS2lUL._AC_UY327_FMwebp_QL65_.jpg");
-            adminProductService.addProduct("Dell XPS 15", "Premium Windows laptop with OLED screen.", BigDecimal.valueOf(1499.00), 25, laptops.getCategoryId(), "https://m.media-amazon.com/images/I/71D0Y7tKzYL._AC_UY327_FMwebp_QL65_.jpg");
+            // Laptops (2 products)
+            adminProductService.addProduct("MacBook Pro 14\"", "M3 Pro chip, 18GB RAM.", BigDecimal.valueOf(199900.00), 20, laptops.getCategoryId(), "https://m.media-amazon.com/images/I/618d5bS2lUL._AC_SL1500_.jpg");
+            adminProductService.addProduct("Dell XPS 15", "Premium Windows laptop with OLED screen.", BigDecimal.valueOf(149990.00), 25, laptops.getCategoryId(), "https://m.media-amazon.com/images/I/71D0Y7tKzYL._AC_SL1500_.jpg");
             
-            // Headphones
-            adminProductService.addProduct("Sony WH-1000XM5", "Industry-leading noise cancellation.", BigDecimal.valueOf(349.00), 100, headphones.getCategoryId(), "https://m.media-amazon.com/images/I/51aXvjzcukL._AC_UY327_FMwebp_QL65_.jpg");
-            adminProductService.addProduct("AirPods Pro 2", "Magical audio experience.", BigDecimal.valueOf(249.00), 200, headphones.getCategoryId(), "https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_UY327_FMwebp_QL65_.jpg");
+            // Headphones (2 products)
+            adminProductService.addProduct("Sony WH-1000XM5", "Industry-leading noise cancellation.", BigDecimal.valueOf(34990.00), 100, headphones.getCategoryId(), "https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SL1500_.jpg");
+            adminProductService.addProduct("AirPods Pro 2", "Magical audio experience.", BigDecimal.valueOf(24900.00), 200, headphones.getCategoryId(), "https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_SL1500_.jpg");
 
-            // Watches
-            adminProductService.addProduct("Apple Watch Series 9", "Smarter. Brighter. Mightier.", BigDecimal.valueOf(399.00), 60, watches.getCategoryId(), "https://m.media-amazon.com/images/I/81x2L61oXRL._AC_UY327_FMwebp_QL65_.jpg");
-            adminProductService.addProduct("Garmin Fenix 7", "Ultimate multisport GPS watch.", BigDecimal.valueOf(699.00), 15, watches.getCategoryId(), "https://m.media-amazon.com/images/I/61I2oE+sKGL._AC_UY327_FMwebp_QL65_.jpg");
+            // Watches (2 products)
+            adminProductService.addProduct("Apple Watch Series 9", "Smarter. Brighter. Mightier.", BigDecimal.valueOf(41900.00), 60, watches.getCategoryId(), "https://m.media-amazon.com/images/I/81x2L61oXRL._AC_SL1500_.jpg");
+            adminProductService.addProduct("Garmin Fenix 7", "Ultimate multisport GPS watch.", BigDecimal.valueOf(69990.00), 15, watches.getCategoryId(), "https://m.media-amazon.com/images/I/61I2oE+sKGL._AC_SL1500_.jpg");
         }
     }
 }
