@@ -222,8 +222,7 @@ const AdminDashboard = () => {
 
   const handleMonthlyBusiness = async (data) => {
     try {
-      const response = await fetch(
-        `/admin/business/monthly?month=${data?.month}&year=${data?.year}`,
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + `/admin/business/monthly?month=${data?.month}&year=${data?.year}`,
         {
           method: "GET",
           credentials: "include",
@@ -251,8 +250,7 @@ const AdminDashboard = () => {
 
   const handleDailyBusiness = async (data) => {
     try {
-      const response = await fetch(
-        `/admin/business/daily?date=${data?.date}`,
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + `/admin/business/daily?date=${data?.date}`,
         {
           method: "GET",
           credentials: "include",
@@ -280,8 +278,7 @@ const AdminDashboard = () => {
 
   const handleYearlyBusiness = async (data) => {
     try {
-      const response = await fetch(
-        `/admin/business/yearly?year=${data?.year}`,
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + `/admin/business/yearly?year=${data?.year}`,
         {
           method: "GET",
           credentials: "include",
@@ -309,8 +306,7 @@ const AdminDashboard = () => {
 
   const handleOverallBusiness = async () => {
     try {
-      const response = await fetch(
-        `/admin/business/overall`,
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + `/admin/business/overall`,
         {
           method: "GET",
           credentials: "include",

@@ -22,8 +22,7 @@ const token = localStorage.getItem("token");
 
 console.log("TOKEN =", token);
 
-const response = await fetch(
-  `/api/cart/items?username=${loggedUser}`,
+const response = await fetch((import.meta.env.VITE_API_URL || "") + `/api/cart/items?username=${loggedUser}`,
   {
     method: "GET",
     headers: {

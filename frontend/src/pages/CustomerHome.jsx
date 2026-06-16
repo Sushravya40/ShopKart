@@ -51,8 +51,7 @@ export default function CustomerHome() {
       const token =
         localStorage.getItem("token");
 
-      const response = await fetch(
-        `/api/products?category=${category}`,
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + `/api/products?category=${category}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -105,8 +104,7 @@ export default function CustomerHome() {
       const token =
         localStorage.getItem("token");
 
-      const response = await fetch(
-        `/api/cart/items/count?username=${username}`,
+      const response = await fetch((import.meta.env.VITE_API_URL || "") + `/api/cart/items/count?username=${username}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
